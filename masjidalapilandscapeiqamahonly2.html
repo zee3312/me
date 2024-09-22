@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqamah Times BCIS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6ffe6; /* Light green background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color:  beige;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 1000px;
+            width: 100%;
+            position: relative;
+        }
+        h2 {
+            text-align: center;
+            color: green; /* Title in green */
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .time-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 2.5em; /* Increased font size */
+        }
+        .time-table th, .time-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #ccc; /* Visible row separators */
+        }
+        .time-table th {
+            background-color: #0066cc;
+            color: white;
+            text-align: center;
+        }
+        .time-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .iqamah {
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 3.0em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: green; /* Section title color */
+        }
+        //.logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px; /* Example size for logo */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="logo.png" class="logo" alt="Logo"> <!-- Logo placeholder -->
+    <h2>Iqamah Times BCIS</h2>
+    <div class="iqamah">
+        <div class="section-title">For Thursday, Sep 19, 2024</div>
+        <table class="time-table">
+            <tbody id="iqamah-times">
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    const iqamah = {
+        "date": "Thursday, Sep 19, 2024",
+        "fajr": "5:45AM",
+        "zuhr": "1:00PM",
+        "asr": "4:30PM",
+        "maghrib": "6:52PM",
+        "isha": "8:15PM",
+        "jummah1": "1:00 PM",
+        "jummah2": "-"
+    };
+
+    // Display iqamah times
+    const iqamahTimesTable = document.getElementById('iqamah-times');
+    iqamahTimesTable.innerHTML = `
+        <tr><th>Fajr</th><td>${iqamah.fajr}</td></tr>
+        <tr><th>Zuhr</th><td>${iqamah.zuhr}</td></tr>
+        <tr><th>Asr</th><td>${iqamah.asr}</td></tr>
+        <tr><th>Maghrib</th><td>${iqamah.maghrib}</td></tr>
+        <tr><th>Isha</th><td>${iqamah.isha}</td></tr>
+        <tr><th>Jummah</th><td>${iqamah.jummah1}</td></tr>
+    `;
+</script>
+
+</body>
+</html>
